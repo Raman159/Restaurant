@@ -1,0 +1,70 @@
+{
+  "staff": [
+    { "id": 1, "name": "John Doe", "position": "Chef", "phone": "123-456-7890" },
+    { "id": 2, "name": "Jane Smith", "position": "Waiter", "phone": "098-765-4321" },
+    { "id": 3, "name": "Mike Johnson", "position": "Manager", "phone": "555-123-4567" }
+  ],
+  "tables": [
+    { "id": 1, "number": "T-01", "capacity": 4, "status": "Available" },
+    { "id": 2, "number": "T-02", "capacity": 6, "status": "Occupied" },
+    { "id": 3, "number": "T-03", "capacity": 2, "status": "Available" }
+  ],
+  "menu": [
+    { 
+      "id": 1, 
+      "name": "Burger", 
+      "category": "Main Course", 
+      "price": 250, 
+      "complementary": "French Fries", 
+      "image": "Smash Burgers with Baconnaise Sauce.jpg",
+      "addOns": [
+        { "name": "Cheese", "price": 30 },
+        { "name": "Bacon", "price": 50 },
+        { "name": "Extra Patty", "price": 80 },
+        { "name": "Lettuce", "price": 20 }
+      ]
+    },
+    { 
+      "id": 2, 
+      "name": "Pizza", 
+      "category": "Main Course", 
+      "price": 450, 
+      "complementary": "Garlic Bread", 
+      "image": "Creamy Cajun Sausage Pasta (One Pot).jpg",
+      "addOns": [
+        { "name": "Extra Cheese", "price": 40 },
+        { "name": "Olives", "price": 35 },
+        { "name": "Mushrooms", "price": 45 },
+        { "name": "Pepperoni", "price": 60 }
+      ]
+    },
+    { 
+      "id": 3, 
+      "name": "Pasta", 
+      "category": "Main Course", 
+      "price": 320, 
+      "complementary": "Breadsticks", 
+      "image": "Delicious Chicken & Goat Cheese dish.jpg",
+      "addOns": [
+        { "name": "Parmesan", "price": 25 },
+        { "name": "Meatballs", "price": 70 },
+        { "name": "Chicken", "price": 90 },
+        { "name": "Shrimp", "price": 120 }
+      ]
+    },
+    { 
+      "id": 4, 
+      "name": "Salad", 
+      "category": "Appetizer", 
+      "price": 180, 
+      "complementary": "Dressing", 
+      "image": "",
+      "addOns": [
+        { "name": "Grilled Chicken", "price": 80 },
+        { "name": "Avocado", "price": 60 },
+        { "name": "Feta Cheese", "price": 40 },
+        { "name": "Croutons", "price": 20 }
+      ]
+    }
+  ]
+}

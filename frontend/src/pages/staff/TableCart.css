@@ -1,0 +1,252 @@
+.tables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.table-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+}
+
+.table-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.table-card.selected {
+  border-color: #3b82f6;
+}
+
+.table-card.available {
+  background: #f0fdf4;
+}
+
+.table-card.reserved {
+  background: #fef3c7;
+}
+
+.table-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.table-capacity {
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.table-status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.table-status.available {
+  background: #10b981;
+  color: white;
+}
+
+.table-status.reserved {
+  background: #f59e0b;
+  color: white;
+}
+
+.calculator-panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.calculator-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-close-sidebar {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.calculator-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.menu-item-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: #f3f4f6;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.menu-item-card:hover {
+  background: #e5e7eb;
+}
+
+.menu-item-info {
+  flex: 1;
+}
+
+.menu-item-name {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.menu-item-addons {
+  font-size: 0.75rem;
+  color: #10b981;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.menu-item-price {
+  color: #10b981;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-left: 0.5rem;
+}
+
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.order-item {
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.order-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.btn-remove {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.order-item-price {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.addons-section {
+  margin: 0.75rem 0;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 4px;
+}
+
+.addon-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.addon-checkbox input {
+  cursor: pointer;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.75rem 0;
+}
+
+.quantity-control button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #d1d5db;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.quantity-control button:hover {
+  background: #f3f4f6;
+}
+
+.item-subtotal {
+  text-align: right;
+  font-weight: 600;
+  color: #1f2937;
+  margin-top: 0.5rem;
+}
+
+.calculator-footer {
+  padding: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  background: white;
+}
+
+.grand-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.btn-checkout {
+  width: 100%;
+  padding: 0.75rem;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-checkout:hover {
+  background: #059669;
+}
