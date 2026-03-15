@@ -1,0 +1,47 @@
+{
+  "name": "resturant-pos",
+  "version": "1.0.0",
+  "description": "A desktop application for POS",
+  "license": "ISC",
+  "author": "laxman",
+  "type": "commonjs",
+  "main": "index.js",
+  "build": {
+    "appId": "com.yourcompany.resturantpos",
+    "productName": "Resturant POS",
+    "asar": true,
+    "files": [
+      "index.js",
+      "preload.js",
+      "backend/dist/**/*",
+      "POS/dist/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist"
+    }
+  },
+  "scripts": {
+    "dev:react": "vite",
+    "dev:backend": "ts-node-dev --respawn --transpile-only backend/src/app.ts",
+    "dev:electron": "wait-on http://localhost:5173 && electron electron/index.js",
+    "dev": "concurrently \"npm:dev:react\" \"npm:dev:backend\" \"npm:dev:electron\"",
+    "build:frontend": "cd POS && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "build:electron": "cross-env NODE_ENV=production electron-builder",
+    "build": "npm run build:frontend && npm run build:backend && npm run build:electron",
+    "start:prod": "cross-env NODE_ENV=production electron index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "path": "^0.12.7",
+    "url": "^0.11.4"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "electron": "^40.0.0",
+    "electron-builder": "^26.7.0"
+  }
+}

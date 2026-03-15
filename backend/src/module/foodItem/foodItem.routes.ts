@@ -3,8 +3,7 @@ import ZOD from "../../middlewares/schemaValidator";
 import { FoodItemController } from "./foodItem.controller";
 import {
   createFoodItemSchema,
-  foodByNameSchema,
-  foodByNameSchema,
+
 } from "./foodItem.schema";
 import { MulterHelper } from "../../middlewares/multer";
 
@@ -21,17 +20,18 @@ export const FoodRouter = (route: Router) => {
     }),
     FoodItemController.addFoodItem,
 
-    route.get(
-      "/food/:name",
-      ZOD.requestParser({
-        schema: foodByNameSchema,
-        type: "Params",
-      }),
-      FoodItemController.getFoodItemByName,
-    ),
-    route.delete(
-      "/food/:id",
-      ZOD.requestParser()
+   //  route.get(
+   //    "/food/:name",
+   //    ZOD.requestParser({
+   //      schema: FoodByNameSchema,
+   //      type: "Params",
+   //    }),
+   //    FoodItemController.getFoodItemByName,
+   //  ),
+   //  route.delete(
+   //    "/food/:id",
+   //    ZOD.requestParser()
+   //  )
   );
 
   //   route.get(

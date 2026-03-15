@@ -1,0 +1,1 @@
+export { useAuthController as authController } from "./authController";
